@@ -1,0 +1,142 @@
+.todo-container {
+  max-width: 550px;
+  margin: 2rem auto;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.todo-container h1 {
+  text-align: center;
+  color: #e06c75;
+  font-size: 5rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.todo-input {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.todo-input input {
+  width: 100%;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  box-sizing: border-box;
+  font-style: italic;
+  color: #4d4d4d;
+}
+
+.todo-input input:focus {
+  outline: none;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ededed;
+  font-size: 1.5rem;
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+
+.todo-list li span {
+  flex: 1;
+  color: #4d4d4d;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-list li button {
+  font-size: 1.8rem;
+  color: #cc9a9a;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: opacity 0.2s;
+}
+
+.todo-list li:hover button {
+  opacity: 1;
+}
+
+.todo-list li input[type='checkbox'] {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid #dbd8d8;
+  position: relative;
+}
+
+.todo-list li.completed input[type='checkbox']::after {
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  left: 9px;
+  top: 2px;
+  width: 9px;
+  height: 18px;
+  border-right: 2px solid #7aafca;
+  border-bottom: 2px solid #7aafca;
+  transform: rotate(40deg);
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #ededed;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters button {
+  border: 1px solid transparent;
+  background: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #777;
+}
+
+.filters button.active {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.clear-completed {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+}
+
+.clear-completed:hover {
+  text-decoration: underline;
+}
